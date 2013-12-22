@@ -2,6 +2,7 @@
 -export([factorial/1, area/1]).
 
 factorial(0) -> 1;
+factorial(N) when N < 2 -> 1;
 factorial(N) -> N * factorial(N-1).
 
 area({square, Side}) ->
